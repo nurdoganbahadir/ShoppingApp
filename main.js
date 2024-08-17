@@ -3,6 +3,7 @@ import "./scss/style.scss";
 
 //*SELEKTÖRLER
 const electronicsBtn = document.querySelector(".electronicsBtn");
+const sportsBtn = document.querySelector(".sportsBtn");
 
 export const urunleriGetir = async (query) => {
   const url = `https://anthonyfs.pythonanywhere.com/api/products/`;
@@ -22,15 +23,20 @@ export const urunleriGetir = async (query) => {
         }
       });
     });
+    sportsBtn.addEventListener("click", () => {
+      document.querySelector(".mainRow").textContent = "";
+      res.data.forEach((item) => {
+        if (item.category_id == 3) {
+          displayAll(item);
+        }
+      });
+    });
 
-
-
-
+    //!RESPONSE BURAYA KADAR
   } catch (error) {
     console.log(error);
   }
 };
-urunleriGetir();
 
 function displayAll(item) {
   document.querySelector(".mainRow").innerHTML += `
@@ -57,3 +63,5 @@ function displayAll(item) {
         </div>
     `;
 }
+
+urunleriGetir();
