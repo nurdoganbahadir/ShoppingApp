@@ -1,0 +1,9 @@
+@media screen and (max-width: 1000px) {
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #searchInput {
+    width: 86%;
+  }
+}
