@@ -1,0 +1,18 @@
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  button {
+    width: 120px;
+  }
+}
+.search {
+  margin: 1.5rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input {
+    width: 50%;
+    text-align: center;
+  }
+}
