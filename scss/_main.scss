@@ -1,3 +1,5 @@
+@use "variables";
+
 .categories {
   display: flex;
   justify-content: center;
@@ -14,5 +16,43 @@
   input {
     width: 50%;
     text-align: center;
+  }
+}
+.categoryDisplay {
+  font-size: 25px;
+  text-align: center;
+  span {
+    color: red;
+  }
+}
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  .card-body {
+    margin: 0;
+    padding: 0;
+    h5,
+    p {
+      margin: 0.5rem;
+    }
+    .lastDiv {
+      background-color: variables.$secondaryColor;
+      .price {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid gray;
+        padding: 0.3rem;
+        h5 {
+          font-weight: bold;
+        }
+      }
+      .priceBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem;
+      }
+    }
   }
 }
