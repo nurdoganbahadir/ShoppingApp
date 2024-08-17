@@ -1,15 +1,13 @@
 //*CATEGORY BUTTONS
-const allBtn = document.querySelector(".btn-primary");
-const electronicsBtn = document.querySelector(".btn-secondary");
-const sportsBtn = document.querySelector(".btn-success");
-const homeBtn = document.querySelector(".btn-danger");
-const shopBtn = document.querySelector(".btn-warning");
-const clothingBtn = document.querySelector(".btn-info");
+export const allBtn = document.querySelector(".btn-primary");
+export const electronicsBtn = document.querySelector(".btn-secondary");
+export const sportsBtn = document.querySelector(".btn-success");
+export const homeBtn = document.querySelector(".btn-danger");
+export const shopBtn = document.querySelector(".btn-warning");
+export const clothingBtn = document.querySelector(".btn-info");
 
 //* SEARCH BUTTON
-const searchInput = document.querySelector("#searchInput");
+export const searchInput = document.querySelector("#searchInput");
 
 //* TEXT CHANGE
-const categoryDisplay = document.querySelector(".categoryDisplay");
-
-
+export const categoryDisplay = document.querySelector(".categoryDisplay");

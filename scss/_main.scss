@@ -21,6 +21,7 @@
 .categoryDisplay {
   font-size: 25px;
   text-align: center;
+  margin-bottom: 1.5rem;
   span {
     color: red;
   }
@@ -29,12 +30,21 @@
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 2rem;
+  img {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 250px;
+    min-height: 250px;
+  }
   .card-body {
     margin: 0;
     padding: 0;
     h5,
     p {
       margin: 0.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .lastDiv {
       background-color: variables.$secondaryColor;
