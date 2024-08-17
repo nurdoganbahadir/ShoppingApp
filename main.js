@@ -17,7 +17,7 @@ export const urunleriGetir = async (query) => {
             <div class="card-body">
               <h5 class="card-title">${item.title}</h5>
               <p class="card-text">
-                ${item.deprecations}
+                ${item.description}
               </p>
               <div class="lastDiv">
                 <div class="price">

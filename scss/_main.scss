@@ -39,10 +39,17 @@
   .card-body {
     margin: 0;
     padding: 0;
-    h5,
-    p {
+    h5 {
       margin: 0.5rem;
       white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p {
+      margin: 0.5rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* Maksimum satır sayısı */
+      -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
     }
