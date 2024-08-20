@@ -1,9 +1,13 @@
-import axios from "axios";
+import axios, { all } from "axios";
 import "./scss/style.scss";
 
 //*SELEKTÖRLER
 const electronicsBtn = document.querySelector(".electronicsBtn");
 const sportsBtn = document.querySelector(".sportsBtn");
+const homeBtn = document.querySelector(".homeBtn");
+const shopBtn = document.querySelector(".shopBtn");
+const clothingBtn = document.querySelector(".clothingBtn");
+const allBtn = document.querySelector(".allBtn");
 
 export const urunleriGetir = async (query) => {
   const url = `https://anthonyfs.pythonanywhere.com/api/products/`;
@@ -12,6 +16,14 @@ export const urunleriGetir = async (query) => {
     const res = await axios(url);
     res.data.forEach((item) => {
       displayAll(item); //*SAYFA İLK YÜKLENDİĞİNDE TÜM İTEMLERI GETİRİYORUZ
+    });
+    
+    //*ALL BUTTON
+    allBtn.addEventListener("click", () => {
+      document.querySelector(".mainRow").textContent = "";
+      res.data.forEach((item) => {
+        displayAll(item);
+      });
     });
 
     //*ELECTRONİCS BUTTON
@@ -23,10 +35,39 @@ export const urunleriGetir = async (query) => {
         }
       });
     });
+    //*SPORTS BUTTON
     sportsBtn.addEventListener("click", () => {
       document.querySelector(".mainRow").textContent = "";
       res.data.forEach((item) => {
         if (item.category_id == 3) {
+          displayAll(item);
+        }
+      });
+    });
+
+    //*HOME BUTTON
+    homeBtn.addEventListener("click", () => {
+      document.querySelector(".mainRow").textContent = "";
+      res.data.forEach((item) => {
+        if (item.category_id == 2) {
+          displayAll(item);
+        }
+      });
+    });
+    //*SHOP BUTTON
+    shopBtn.addEventListener("click", () => {
+      document.querySelector(".mainRow").textContent = "";
+      res.data.forEach((item) => {
+        if (item.category_id == 4) {
+          displayAll(item);
+        }
+      });
+    });
+    //*CLOTHİNG BUTTON
+    clothingBtn.addEventListener("click", () => {
+      document.querySelector(".mainRow").textContent = "";
+      res.data.forEach((item) => {
+        if (item.category_id == 5) {
           displayAll(item);
         }
       });
